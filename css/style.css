@@ -1,0 +1,86 @@
+/* GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    color: #000;
+    background: #355070;
+}
+
+/* LAYOUT */
+#app {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* HEADER */
+.header-img img {
+    width: 300px;
+    margin-bottom: 20px;
+    margin-left: 46px;
+    text-align: center;
+    font-weight: 400;
+}
+
+/* NEW TODO */
+.add-todo {
+    width: 400px;
+    height: 40px;
+    line-height: 45px;
+    margin-bottom: 40px;
+    padding: 0 15px;
+    font-size: 16px;
+    background: rgba(255,255,255, .75);
+    border: 0;
+    box-shadow: 0 15px 10px -10px rgba(0,0,0, .4);
+    outline: none;
+    transition: background-color .4s;
+}
+
+.add-todo:hover,
+.add-todo:focus {
+    background: #fff;
+}
+
+/* BUTTON */
+.contents button {
+    position: absolute;
+    color: #000;
+    background: #dddd;
+    border-radius: 12px;
+    padding: 14px 30px;
+    margin-left: 10px;
+    line-height: 10px;
+}
+
+/* TODO LIST */
+.todos li {
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+    list-style: none;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255,255,255, .2);
+    color: #000;
+}
+
+.todos li:hover {
+    background: #dddd;
+    cursor: pointer;
+}
+
+.todos li i {
+    opacity: .5;
+    transition: opacity .4s;
+    cursor: pointer;
+}
+
+.todos li i:hover {
+    opacity: 1;
+}
