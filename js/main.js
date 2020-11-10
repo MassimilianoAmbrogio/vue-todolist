@@ -12,6 +12,15 @@
 const app = new Vue({
     el: '#app',
         data: {
-             logo: './img/logo.png'
-    },
+            logo: './img/logo.png',
+
+           // Sorgente dati
+           todoLists: [
+                'Fare i compiti',
+                'Fare la spesa',
+                'Fare il bucato'
+            ]
+       }
 });
+
+ 

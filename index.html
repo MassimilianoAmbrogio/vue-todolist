@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ToDo List</title>
+    <title>Todo List</title>
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <!-- FontAwesome -->
@@ -24,13 +24,14 @@
 
         <!-- Main new todo and remove -->
         <main class="contents">
-            <input type="text" class="add-todo" placeholder="Nuovo Todo" />
-            <button>Aggiungi</button>
-        
+            <input type="text" class="add-todo" placeholder="Nuovo Todo"
+               @keyup.enter="todoList"/>
+               <button>Aggiungi</button>
+            
             <ul class="todos">
-                <li>
-                    <span>Fare i compiti</span>
-                    <i class="fas fa-times"></i>
+                <li v-for="todoList in todoLists">
+                    {{todoList}}
+                    <i class="fas fa-times"></i> 
                 </li>
             </ul>
         </main>
