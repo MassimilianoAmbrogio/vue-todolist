@@ -25,10 +25,7 @@ const app = new Vue({
             if (this.newTodo.trim() !== '') {
                 this.todos.push(this.newTodo);
                 this.newTodo = '';
-                
               }
         }
     }
 });
-
- 

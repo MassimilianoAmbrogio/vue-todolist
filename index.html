@@ -36,9 +36,9 @@
         <!-- Section todos and remove -->
         <section class="todos-container">
             <ul>
-                <li class="todo" v-for="todo in todos">
+                <li class="todo" v-for="(todo, index) in todos">
                     {{todo}}
-                    <i class="fas fa-times"></i> 
+                    <i @click="remove(index)" class="fas fa-times"></i> 
                 </li>
             </ul>
         </section>
