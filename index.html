@@ -11,30 +11,37 @@
     <!-- CSS -->
     <link rel="stylesheet" href="./css/style.css">
     <!-- Vue JS   -->
-    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 </head>
 <body>
     <!-- Inizio esercizio Todo list -->
 
-    <div id="app">
+    <div id="app" class="container">
         <!-- Header img -->
-        <header class="header-img">
-            <img :src="logo" alt="logo boolean">
+        <header class="logo">
+            <img src="./img/logo.png" alt="Logo Boolean">
         </header>
 
-        <!-- Main new todo and remove -->
-        <main class="contents">
-            <input type="text" class="add-todo" placeholder="Nuovo Todo"
-               @keyup.enter="todoList"/>
-               <button>Aggiungi</button>
-            
-            <ul class="todos">
-                <li v-for="todoList in todoLists">
-                    {{todoList}}
+        <!-- Section new todo -->
+        <section class="new-todo">
+            <input
+               type="text"
+               placeholder="Nuovo Todo"
+               v-model="newTodo"
+               @keyup.enter="addTodo"
+            >
+            <button @click="addTodo">Aggiungi</button>
+        </section>
+
+        <!-- Section todos and remove -->
+        <section class="todos-container">
+            <ul>
+                <li class="todo" v-for="todo in todos">
+                    {{todo}}
                     <i class="fas fa-times"></i> 
                 </li>
             </ul>
-        </main>
+        </section>
     </div>
 
     <!-- JS -->

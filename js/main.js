@@ -11,16 +11,24 @@
 // Parte Vue
 const app = new Vue({
     el: '#app',
-        data: {
-            logo: './img/logo.png',
-
-           // Sorgente dati
-           todoLists: [
-                'Fare i compiti',
-                'Fare la spesa',
-                'Fare il bucato'
-            ]
-       }
+    data: {
+        // Sorgente dati
+        todos: [
+            'Fare i compiti',
+            'Fare la spesa',
+            'Giocare ai videogiochi'
+        ],
+        newTodo: ''
+    },
+    methods: {
+        addTodo() {
+            if (this.newTodo.trim() !== '') {
+                this.todos.push(this.newTodo);
+                this.newTodo = '';
+                
+              }
+        }
+    }
 });
 
  
