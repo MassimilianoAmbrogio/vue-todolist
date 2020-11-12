@@ -21,11 +21,25 @@ const app = new Vue({
         newTodo: ''
     },
     methods: {
+        /**
+         * Add new todo item
+         */
         addTodo() {
             if (this.newTodo.trim() !== '') {
                 this.todos.push(this.newTodo);
                 this.newTodo = '';
               }
+        },
+        /**
+         * Remove todo by index from list
+         */
+        removeTodo(index) {
+            console.log(index);
+
+            this.todos.splice(index, 1);
+
+            // const deleted = this.todos.splice(index, 1);
+            // console.log(deleted);
         }
     }
 });
